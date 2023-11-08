@@ -1,95 +1,133 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import React from "react";
+import Image from "next/image";
+import left from "@/assets/left.svg";
+import right from "@/assets/right.svg";
+import specter from "@/assets/specter.svg";
+import homeStyle from "./styles/home.module.css";
+import icon from "@/assets/icon.svg";
+import list1 from "@/assets/list1.svg";
+import list2 from "@/assets/list2.svg";
+import list3 from "@/assets/list3.svg";
+import list4 from "@/assets/list4.svg";
+import service1 from "@/assets/service1.svg";
+import service2 from "@/assets/service2.svg";
+import service3 from "@/assets/service3.svg";
+import service4 from "@/assets/service4.svg";
+import service5 from "@/assets/service5.svg";
+import service6 from "@/assets/service6.svg";
+import service7 from "@/assets/service7.svg";
+import service8 from "@/assets/service8.svg";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+    <div className={homeStyle.container}>
+      <div className={homeStyle.cards}>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h1>
+            Discover <span>Trutnov&#39;</span>s
+            <br /> Hidden Gem
+          </h1>
+          <p>
+            Our prime and affordable location near the historical center of
+            Trutnov ensures convenience and easy access to all the attractions
+            the city has to offer.
+          </p>
+          <form>
+            <div className={homeStyle.form}>
+              <label>
+                Check-in:
+                <br /> <input type="date" />
+              </label>
+
+              <label>
+                Check-out:
+                <br /> <input type="date" />
+              </label>
+            </div>
+            <button type="submit">
+              <Image
+                src={icon}
+                height="auto"
+                width="auto"
+                alt="picture of booking"
+              />
+              Book Now
+            </button>
+          </form>
+        </div>
+        <div>
+          <Image
+            src={left}
+            width="auto"
+            height="400"
+            alt="picture left frame"
+          />
+          <Image
+            src={specter}
+            width="auto"
+            height="400"
+            alt="picture fixed specter frame"
+          />
+          <Image
+            src={right}
+            width="auto"
+            height="400"
+            alt="picture left frame"
+          />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={homeStyle.lists}>
+        <Image src={list1} height="auto" width="300" alt="" />
+        <Image src={list2} height="auto" width="300" alt="" />
+        <Image src={list3} height="auto" width="300" alt="" />
+        <Image src={list4} height="auto" width="300" alt="" />
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div className={homeStyle.services}>
+        <h2>Our Amenities</h2>
+        <div className={homeStyle.service_cards}>
+          <div>
+            <Image src={service1} width="auto" height="auto" alt="" />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+            <span>Free wi-fi</span>
+          </div>
+          <div>
+            <Image src={service2} width="auto" height="auto" alt="" />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+            <span>Garden with playground</span>
+          </div>
+          <div>
+            <Image src={service3} width="auto" height="auto" alt="" />
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <span>Beds from 200 Kč (8 €) per night</span>
+          </div>
+          <div>
+            <Image src={service4} width="auto" height="auto" alt="" />
+
+            <span>Free parking</span>
+          </div>
+          <div>
+            <Image src={service5} width="auto" height="auto" alt="" />
+
+            <span>Wheelchair accessible</span>
+          </div>
+          <div>
+            <Image src={service6} width="auto" height="auto" alt="" />
+
+            <span>Close to the bus terminal and train station.</span>
+          </div>
+          <div>
+            <Image src={service7} width="auto" height="auto" alt="" />
+
+            <span>Group discounts and long stay discounts</span>
+          </div>
+          <div>
+            <Image src={service8} width="auto" height="auto" alt="" />
+
+            <span>Kitchen and meeting room with TV</span>
+          </div>
+        </div>
       </div>
-    </main>
-  )
+    </div>
+  );
 }

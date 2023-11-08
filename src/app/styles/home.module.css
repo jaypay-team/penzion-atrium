@@ -1,0 +1,109 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  height: 400px;
+}
+.cards span {
+  background-clip: text;
+  color: transparent;
+  background: linear-gradient(
+    45deg,
+    hsla(208, 78%, 55%, 1),
+    hsla(330, 77%, 68%, 1)
+  );
+}
+
+.cards form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cards h1 {
+  font-family: Urbanist;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.cards p {
+  color: hsla(0, 0%, 25%, 1);
+  font-family: Urbanist;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.cards label {
+  font-family: Urbanist;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.cards input {
+  height: 52px;
+  padding: 16px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.cards button {
+  background: var(--button-background);
+  color: var(--white);
+  display: flex;
+  width: 100%;
+  height: 52px;
+  padding: 16px;
+  border-radius: 10px;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.services {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.services h2 {
+  font-family: Urbanist;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0em;
+  display: flex;
+  margin: auto;
+  padding: 32px 0px 32px 0px;
+}
+.service_cards {
+  display: grid;
+  margin: auto;
+  width: 806px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.service_cards div {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 112px;
+  padding: 0 24px;
+}
+.service_cards div * {
+  display: flex;
+  align-items: auto;
+}

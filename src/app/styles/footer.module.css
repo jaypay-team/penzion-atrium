@@ -1,0 +1,40 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background: var(--footer-background);
+  color: var(--white);
+  padding: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.topography {
+  font-family: Urbanist;
+  color: var(--white, #fff);
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem; /* 150% */
+}
+
+.card:nth-child(1) a {
+  display: flex;
+  flex-direction: column;
+}
+
+.card:nth-child(2) div > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-self: start;
+  align-self: center;
+}
