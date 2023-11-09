@@ -1,0 +1,27 @@
+.heading {
+  font-family: Urbanist;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 66px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 40rem;
+  gap: 3.75rem;
+}
+.contact_form {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+}
+.form {
+  border-radius: 8px;
+  border: 1px hsla(215, 48%, 90%, 1);
+  gap: 24px;
+  box-shadow: 0 0 21px hsla(206, 37%, 43%, 0.1);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}

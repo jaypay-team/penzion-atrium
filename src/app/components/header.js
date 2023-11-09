@@ -24,7 +24,7 @@ export default function header() {
         <Link href="/components/accommodation">Accommodation</Link>
         <Link href="">Services</Link>
         <Link href="">Surroundings</Link>
-        <Link href="">Contact</Link>
+        <Link href="/components/contact">Contact</Link>
         <div>
           <Image
             src={flag}

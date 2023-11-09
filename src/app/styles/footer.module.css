@@ -1,40 +1,43 @@
 .footer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   background: var(--footer-background);
   color: var(--white);
   padding: 3rem;
+  justify-content: center;
 }
 
-.card {
+.initial {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logos {
   display: flex;
   flex-direction: column;
 }
+.social {
+  display: flex;
+  gap: 20px;
+}
 
-.topography {
+.heading {
   font-family: Urbanist;
-  color: var(--white, #fff);
-  font-size: 1rem;
-  font-style: normal;
-  line-height: 1.5rem; /* 150% */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.card:nth-child(1) a {
+.contact {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
-
-.card:nth-child(2) div > a {
+.contact_info {
   display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.card > div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  justify-self: start;
-  align-self: center;
+  gap: 8px;
 }

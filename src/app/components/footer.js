@@ -1,78 +1,99 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import React from "react";
 import footerStyle from "@/styles/footer.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import logo from "@/assets/logo.svg";
 import logo2 from "@/assets/logo2.svg";
-import vector from "@/assets/vector.svg";
+import TRUTNOV from "@/assets/TRUTNOV.svg";
+import instagram from "@/assets/instagram.svg";
 import facebook from "@/assets/facebook.svg";
+import location from "@/assets/location.svg";
+import call from "@/assets/call-calling.svg";
+import sms from "@/assets/sms.svg";
 
-export default function footer() {
+export default function Footer() {
   return (
     <nav className={footerStyle.footer}>
       <FooterLogo />
-      <FooterContactUs />
-      <FooterLocation />
-      <FooterContact />
+      <ContactInfo />
+      <ContactEmail />
     </nav>
   );
 }
 
 const FooterLogo = () => (
-  <div className={footerStyle.card}>
-    <Link href="/">
-      <Image src={logo} width="100" height="80" alt="picture of the brand" />
-      <Image src={logo2} width="80" height="auto" alt="picture of the brand" />
-    </Link>
-  </div>
-);
-
-const FooterContactUs = () => (
-  <div className={footerStyle.card}>
-    <div>
-      <p className={footerStyle.topography}>Follow Us</p>
-      <Link href="https://instagram.com">
-        <Image src={vector} width="20" height="20" alt="picture of instagram" />
-        <span className={footer.topography}>pensionatrium</span>
-      </Link>
-      <Link href="https://facebook.com">
-        <Image
-          src={facebook}
-          width="20"
-          height="20"
-          alt="picture of location"
-        />
-        <span className={footer.topography}>pensionatriumcz</span>
-      </Link>
+  <div className={footerStyle.initial}>
+    <div className={footerStyle.logos}>
+      <div>
+        <Image src={logo} width="45" height="auto" alt="picture logo" />
+        <Image src={logo2} width="45" height="auto" alt="picture logo" />
+      </div>
+      <Image src={TRUTNOV} width="90" height="auto" alt="picture logo" />
+    </div>
+    <div className={footerStyle.social}>
+      <Image src={facebook} width="40" height="auto" alt="picture logo" />
+      <Image src={instagram} width="auto" height="auto" alt="picture logo" />
     </div>
   </div>
 );
 
-const FooterLocation = () => (
-  <div className={footerStyle.card}>
-    <div>
-      <p className={footer.topography}>Pension Atrium</p>
-      <Link href="#">
-        Žižkova 504 <br />
-        541 01 - Trutnov{" "}
-      </Link>
-      <Link href="#">
-        50°33'39.393"N, <br />
-        15°54'15.424"E
-      </Link>
+const ContactInfo = () => {
+  return (
+    <div className={footerStyle.contact}>
+      <Heading headingText="Contact info" />
+      <div className={footerStyle.contact}>
+        <div className={footerStyle.contact_info}>
+          <Image
+            src={location}
+            width="auto"
+            height="auto"
+            alt="picture location/map"
+          />
+          <span>541 01 - Trutnov, Žižkova 504</span>
+        </div>
+        <div className={footerStyle.contact_info}>
+          <Image
+            src={call}
+            width="auto"
+            height="auto"
+            alt="picture call/phone"
+          />
+          <span>tel.: (+420) 731 415 455</span>
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-const FooterContact = () => (
-  <div className={footerStyle.card}>
-    <div>
-      <p className={footerStyle.topography}>Zdeněk Plecháč</p>
-      <Link href="#">penzionatrium@seznam.cz plechac@zskomtu.cz</Link>
-      <Link href="http://penziontrutnov.cz/">
-        tel.: (+420) 731 415 455 www.penziontrutnov.cz
-      </Link>
+const ContactEmail = () => {
+  return (
+    <div className={footerStyle.contact}>
+      <Heading headingText="Emails" />
+      <div className={footerStyle.contact}>
+        <div className={footerStyle.contact_info}>
+          <Image
+            src={sms}
+            width="auto"
+            height="auto"
+            alt="picture location/map"
+          />
+          <span>penzionatrium@seznam.cz</span>
+        </div>
+        <div className={footerStyle.contact_info}>
+          <Image
+            src={sms}
+            width="auto"
+            height="auto"
+            alt="picture call/phone"
+          />
+          <span>plechac@zskomtu.cz</span>
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
+const Heading = ({ headingText }) => {
+  return <p className={footerStyle.heading}>{headingText}</p>;
+};
