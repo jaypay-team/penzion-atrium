@@ -1,0 +1,54 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main_heading {
+  font-family: Urbanist;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: 0em;
+  color: hsla(0, 0%, 0%, 1);
+  text-align: center;
+  padding: 32px 0px 32px 0px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.card {
+  aspect-ratio: 1/1;
+  border: 1px solid hsla(206, 37%, 43%, 0.1);
+  box-shadow: 1px 1px 2px hsla(206, 37%, 43%, 0.1);
+}
+
+.header_text {
+  background: var(--button-background);
+  color: var(--white);
+  height: 54px;
+  padding: 10px;
+  border-radius: 8px 8px 0px 0px;
+  gap: 10px;
+  text-align: center;
+}
+
+.detail {
+  height: 769px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.48fr;
+}
+
+.detail_header {
+  font-family: Urbanist;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: hsla(0, 0%, 0%, 1);
+}

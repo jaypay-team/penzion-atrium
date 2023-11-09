@@ -5,13 +5,15 @@
   height: 400px;
 }
 .cards span {
-  background-clip: text;
-  color: transparent;
   background: linear-gradient(
     45deg,
     hsla(208, 78%, 55%, 1),
     hsla(330, 77%, 68%, 1)
   );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
 
 .cards form {
