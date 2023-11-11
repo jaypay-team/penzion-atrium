@@ -11,7 +11,7 @@ export default function header() {
   return (
     <nav className={headerStyle.header}>
       <div>
-        <Link href="">
+        <Link href="/">
           <Image
             src={logo}
             width="auto"

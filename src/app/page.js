@@ -36,12 +36,12 @@ export default function Home() {
             <div className={homeStyle.form}>
               <label>
                 Check-in:
-                <br /> <input type="date" />
+                <br /> <input type="date" placeholder="Check-in Date" />
               </label>
 
               <label>
                 Check-out:
-                <br /> <input type="date" />
+                <br /> <input type="date" placeholder="Check-out Date" />
               </label>
             </div>
             <button type="submit">

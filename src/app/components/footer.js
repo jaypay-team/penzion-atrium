@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React from "react";
+import Link from "next/link";
 import footerStyle from "@/styles/footer.module.css";
 import Image from "next/image";
 import logo from "@/assets/logo.svg";
@@ -25,15 +26,20 @@ export default function Footer() {
 const FooterLogo = () => (
   <div className={footerStyle.initial}>
     <div className={footerStyle.logos}>
-      <div>
+      <Link href="/">
         <Image src={logo} width="45" height="auto" alt="picture logo" />
         <Image src={logo2} width="45" height="auto" alt="picture logo" />
-      </div>
+      </Link>
       <Image src={TRUTNOV} width="90" height="auto" alt="picture logo" />
     </div>
     <div className={footerStyle.social}>
-      <Image src={facebook} width="40" height="auto" alt="picture logo" />
-      <Image src={instagram} width="auto" height="auto" alt="picture logo" />
+      <Link href="https://facebook.com" target="_blank">
+        {" "}
+        <Image src={facebook} width="40" height="auto" alt="picture logo" />
+      </Link>
+      <Link href="https://instagram.com" target="_blank">
+        <Image src={instagram} width="auto" height="auto" alt="picture logo" />
+      </Link>
     </div>
   </div>
 );
@@ -50,7 +56,9 @@ const ContactInfo = () => {
             height="auto"
             alt="picture location/map"
           />
-          <span>541 01 - Trutnov, Žižkova 504</span>
+          <Link href="https://www.google.com/maps/search/541+01+-+Trutnov,+%C5%BDi%C5%BEkova+504/@8.9634795,38.6133287,11z?entry=ttu">
+            541 01 - Trutnov, Žižkova 504
+          </Link>
         </div>
         <div className={footerStyle.contact_info}>
           <Image
