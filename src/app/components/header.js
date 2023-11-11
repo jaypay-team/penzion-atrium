@@ -29,8 +29,8 @@ export default function header() {
 
       <div>
         <Link href="/components/accommodation">Accommodation</Link>
-        <Link href="">Services</Link>
-        <Link href="">Surroundings</Link>
+        <Link href="/components/services">Services</Link>
+        <Link href="/components/surroundings">Surroundings</Link>
         <Link href="/components/contact">Contact</Link>
       </div>
 

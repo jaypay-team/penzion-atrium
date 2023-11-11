@@ -56,7 +56,10 @@ const ContactInfo = () => {
             height="auto"
             alt="picture location/map"
           />
-          <Link href="https://www.google.com/maps/search/541+01+-+Trutnov,+%C5%BDi%C5%BEkova+504/@8.9634795,38.6133287,11z?entry=ttu">
+          <Link
+            href="https://maps.app.goo.gl/zJ8BCQWUZh5jzbom6"
+            target="_blank"
+          >
             541 01 - Trutnov, Žižkova 504
           </Link>
         </div>

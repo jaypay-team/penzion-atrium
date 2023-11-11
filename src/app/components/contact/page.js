@@ -29,7 +29,7 @@ const MapFrame = () => (
       width="100%"
       height="100%"
       id="gmap_canvas"
-      src="https://maps.google.com/maps?q=zizkova&t=&z=20&ie=UTF8&iwloc=&output=embed"
+      src="https://www.google.com/maps/embed/v1/place?q=Žižkova+504,+541+01+Trutnov+1-Horní+Předměstí,+Czechia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
       frameborder="0"
       scrolling="no"
       marginheight="0"

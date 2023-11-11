@@ -35,12 +35,30 @@ const Detail = () => (
   <div className={AccommodationStyle.detail}>
     <div>
       <DetailHeader detailHeaderText="Ground Floor" />
+      <p>
+        first floor - 30 beds, meeting room and kitchen - wheelchair accessible.
+      </p>
     </div>
     <div>
       <DetailHeader detailHeaderText="First Floor" />
+      <p>
+        ground floor - 30 beds, meeting room and kitchen - wheelchair
+        accessible.
+      </p>
     </div>
     <div>
       <DetailHeader detailHeaderText="INFORMATION NOTICE" />
+      <p>
+        According to the Sales Registration Act, the seller is obliged to issue
+        a receipt to the buyer. At the same time, he is obliged to register the
+        received sales with the tax administrator online, within 48 hours in the
+        event of a technical failure
+      </p>
+      <p>
+        *Prices do not include city tax 20CZK per person per day). This tax does
+        not apply to guests under 18 or over 65 years of age. Valid from 1.1.
+        2022.
+      </p>
     </div>
   </div>
 );
