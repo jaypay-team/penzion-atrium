@@ -1,5 +1,16 @@
 import React from "react";
 import contactUs from "@/styles/contact.module.css";
+import Image from "next/image";
+import location from "@/assets/location1.svg";
+import call from "@/assets/call-calling1.svg";
+import email from "@/assets/sms1.svg";
+import data from "./data.json";
+
+const icons = [
+  [location, call],
+  [email, email],
+];
+
 export default function page() {
   return (
     <div>
@@ -38,17 +49,18 @@ const ContactFrom = () => {
 const From = () => {
   return (
     <form className={contactUs.form}>
+      <h3>Leave Us A Message</h3>
       <div>
-        <div>Name</div>
-        <input type="text" />
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" />
       </div>
       <div>
-        <div>Email</div>
-        <input type="text" />
+        <label>Email</label>
+        <input type="text" placeholder="Enter your email" />
       </div>
       <div>
-        <div>Message</div>
-        <textarea type="text" />
+        <label>Message</label>
+        <textarea type="text" placeholder="write your message here" />
       </div>
       <button type="submit">Save</button>
     </form>
@@ -56,5 +68,36 @@ const From = () => {
 };
 
 const ContactInfo = () => {
-  return <div></div>;
+  return (
+    <div className={contactUs.infos}>
+      {data.items.map((item, index) => (
+        <InfoCard
+          key={index}
+          headingTitle={item.heading}
+          content={item.content}
+          icons={icons[index]}
+        />
+      ))}
+    </div>
+  );
 };
+
+const InfoCard = ({ headingTitle, content, icons }) => (
+  <div className={contactUs.info_card}>
+    <h4>{headingTitle}</h4>
+    <div>
+      <Image
+        src={icons[0]}
+        width="auto"
+        height="auto"
+        alt="picture of info "
+        background="black"
+      />
+      <span>{content[0]}</span>
+    </div>
+    <div>
+      <Image src={icons[1]} width="auto" height="auto" alt="picture of info " />
+      <span>{content[1]}</span>
+    </div>
+  </div>
+);
