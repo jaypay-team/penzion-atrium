@@ -1,0 +1,18 @@
+{
+    "items":[
+       { "url":"../../assets/pic.svg","content":
+       {"title":"Trutnov city Center",
+       "detail":"Trutnov, surrounded by the Krkonoše Mountains, is a city filled with history and nature. Discover its historic sites, enjoy local festivals, and use it as a base for outdoor adventures. Easy transportation options make exploring the surrounding area a breeze."}},
+       { "url":"../../assets/pic1.svg","content":
+       {"title":"The Krkonoše Mountains National Park",
+       "detail":"Krkonoše Mountains National Park, located near Trutnov, is a natural wonderland. Explore its pristine landscapes, hike through lush forests, and marvel at its unique wildlife. With Trutnov as your starting point, access to this national park is easy, offering endless opportunities for outdoor enthusiasts."}},
+       { "url":"../../assets/pic2.svg","content":
+       {"title":"Trutnov city Center","detail":"Trutnov, surrounded by the Krkonoše Mountains, is a city filled with history and nature. Discover its historic sites, enjoy local festivals, and use it as a base for outdoor adventures. Easy transportation options make exploring the surrounding area a breeze."}},
+       { "url":"../../assets/pic3.svg","content":
+       {"title":"The Krkonoše Mountains National Park","detail":"Krkonoše Mountains National Park, located near Trutnov, is a natural wonderland. Explore its pristine landscapes, hike through lush forests, and marvel at its unique wildlife. With Trutnov as your starting point, access to this national park is easy, offering endless opportunities for outdoor enthusiasts."}},
+       { "url":"../../assets/pic4.svg","content":
+       {"title":"Trutnov city Center","detail":"Trutnov, surrounded by the Krkonoše Mountains, is a city filled with history and nature. Discover its historic sites, enjoy local festivals, and use it as a base for outdoor adventures. Easy transportation options make exploring the surrounding area a breeze."}},
+       { "url":"../../assets/pic5.svg","content":
+       {"title":"The Krkonoše Mountains National Park","detail":"Krkonoše Mountains National Park, located near Trutnov, is a natural wonderland. Explore its pristine landscapes, hike through lush forests, and marvel at its unique wildlife. With Trutnov as your starting point, access to this national park is easy, offering endless opportunities for outdoor enthusiasts."}}
+    ]
+}
