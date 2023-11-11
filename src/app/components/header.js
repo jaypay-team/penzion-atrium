@@ -4,41 +4,48 @@ import Link from "next/link";
 import headerStyle from "@/styles/header.module.css";
 import logo from "@/assets/logo.svg";
 import logo2 from "@/assets/logo2header.svg";
-import flag from "@/assets/flag.svg";
+import flag from "@/assets/GB.svg";
 import icon from "@/assets/icon.svg";
-import options from "@/assets/options.svg";
 
 export default function header() {
   return (
     <nav className={headerStyle.header}>
-      <Link href="">
-        <Image src={logo} width="auto" height="55" alt="picture of the brand" />
-        <Image
-          src={logo2}
-          width="auto"
-          height="55"
-          alt="picture of the brand"
-        />
-      </Link>
+      <div>
+        <Link href="">
+          <Image
+            src={logo}
+            width="auto"
+            height="55"
+            alt="picture of the brand"
+          />
+          <Image
+            src={logo2}
+            width="auto"
+            height="55"
+            alt="picture of the brand"
+          />
+        </Link>
+      </div>
+
       <div>
         <Link href="/components/accommodation">Accommodation</Link>
         <Link href="">Services</Link>
         <Link href="">Surroundings</Link>
         <Link href="/components/contact">Contact</Link>
+      </div>
+
+      <div>
         <div>
           <Image
             src={flag}
-            height="auto"
-            width="auto"
+            height="24"
+            width="24"
             alt="picture language options"
           />
-          <span>EN</span>
-          <Image
-            src={options}
-            height="auto"
-            width="auto"
-            alt="picture language options"
-          />
+          <span>SV</span>
+          <select>
+            <option></option>
+          </select>
         </div>
 
         <button className={headerStyle.button}>
