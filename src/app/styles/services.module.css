@@ -1,0 +1,17 @@
+.heading {
+  font-family: Urbanist;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.body {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.body div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}

@@ -135,3 +135,32 @@
 .card:nth-of-type(3) > div {
   padding: 2rem;
 }
+
+/* beneath cards detail style*/
+
+.detail div:nth-child(1),
+.detail div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.detail div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.detail p {
+  font-family: Urbanist;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: hsla(0, 0%, 25%, 1);
+}
+.floor_card {
+  display: flex;
+  justify-content: space-between;
+}

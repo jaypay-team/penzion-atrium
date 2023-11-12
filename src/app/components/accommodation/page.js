@@ -157,6 +157,7 @@ const Detail = () => (
       <p>
         first floor - 30 beds, meeting room and kitchen - wheelchair accessible.
       </p>
+      <div className={AccommodationStyle.floor_card}></div>
     </div>
     <div>
       <DetailHeader detailHeaderText="First Floor" />
@@ -164,6 +165,7 @@ const Detail = () => (
         ground floor - 30 beds, meeting room and kitchen - wheelchair
         accessible.
       </p>
+      <div className={AccommodationStyle.floor_card}></div>
     </div>
     <div>
       <DetailHeader detailHeaderText="INFORMATION NOTICE" />
