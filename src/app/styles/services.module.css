@@ -5,13 +5,80 @@
   line-height: 62px;
   letter-spacing: 0em;
   text-align: center;
+  padding: 2rem;
 }
 .body {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
 }
-.body div {
+.body > div {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1.5rem;
+  align-items: center;
+  padding: 0 3rem;
+  border-radius: 10px;
+}
+
+.body > div > img {
+  height: 21.875rem;
+  aspect-ratio: 1/1;
+}
+
+.body p {
+  font-family: Urbanist;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0em;
+  color: hsla(0, 0%, 25%, 1);
+}
+
+/* bottom up */
+.list {
+  display: flex;
+  gap: 1rem;
+}
+
+.sport_list {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.list a,
+.list span {
+  font-family: Urbanist;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: hsla(0, 0%, 25%, 1);
+}
+.detail {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.meal_detail {
+  display: grid;
+  gap: 1rem;
+}
+.list span:nth-child(3) {
+  font-family: Urbanist;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0em;
+  text-align: right;
+  background: linear-gradient(
+    45deg,
+    hsla(219, 58%, 28%, 1),
+    hsla(218, 57%, 38%, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
