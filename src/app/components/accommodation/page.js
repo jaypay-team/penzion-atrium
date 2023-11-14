@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
 import Image from "next/image";
 import icon1 from "@/assets/icon1.svg";
@@ -9,6 +8,8 @@ import icon5 from "@/assets/icon5.svg";
 import icon6 from "@/assets/icon6.svg";
 import icon7 from "@/assets/icon7.svg";
 import icon8 from "@/assets/icon8.svg";
+import floor from "@/assets/floor.svg";
+import guest from "@/assets/guest.svg";
 import AccommodationStyle from "@/styles/accommodation.module.css";
 
 export default function page() {
@@ -130,7 +131,7 @@ const Cards = () => {
         </p>
         <div className={AccommodationStyle.card_body2}>
           {card2Detail.map((item, index) => (
-            <ServiceDetail2 kay={index} item={item} />
+            <ServiceDetail2 item={item} key={index} />
           ))}
         </div>
       </div>
@@ -150,39 +151,64 @@ const CardHeader = ({ headerText }) => (
   <h1 className={AccommodationStyle.header_text}>{headerText}</h1>
 );
 
-const Detail = () => (
-  <div className={AccommodationStyle.detail}>
-    <div>
-      <DetailHeader detailHeaderText="Ground Floor" />
-      <p>
-        first floor - 30 beds, meeting room and kitchen - wheelchair accessible.
-      </p>
-      <div className={AccommodationStyle.floor_card}></div>
+const Detail = () => {
+  const standardList = [
+    { value: "500 Kč*", standard: "Tourist" },
+    { value: "600 Kč*", standard: "Standard" },
+  ];
+
+  return (
+    <div className={AccommodationStyle.detail}>
+      <div>
+        <DetailHeader detailHeaderText="Ground Floor" />
+        <p>
+          first floor - 30 beds, meeting room and kitchen - wheelchair
+          accessible.
+        </p>
+        <div className={AccommodationStyle.floor_card}>
+          <Image src={floor} alt="picture of the floor" />
+          <Room />
+          <Line />
+          {standardList.map((item, index) => (
+            <ValuePerStandard key={index} item={item} />
+          ))}
+          <BookAvailable />
+        </div>
+      </div>
+      <div>
+        <DetailHeader detailHeaderText="First Floor" />
+
+        <p>
+          ground floor - 30 beds, meeting room and kitchen - wheelchair
+          accessible.
+        </p>
+        <div className={AccommodationStyle.floor_card}>
+          <Image src={floor} alt="picture of the floor" />
+          <Room />
+          <Line />
+          {standardList.map((item, index) => (
+            <ValuePerStandard key={index} item={item} />
+          ))}
+          <BookAvailable />
+        </div>
+      </div>
+      <div>
+        <DetailHeader detailHeaderText="INFORMATION NOTICE" />
+        <p>
+          According to the Sales Registration Act, the seller is obliged to
+          issue a receipt to the buyer. At the same time, he is obliged to
+          register the received sales with the tax administrator online, within
+          48 hours in the event of a technical failure
+        </p>
+        <p>
+          *Prices do not include city tax 20CZK per person per day). This tax
+          does not apply to guests under 18 or over 65 years of age. Valid from
+          1.1. 2022.
+        </p>
+      </div>
     </div>
-    <div>
-      <DetailHeader detailHeaderText="First Floor" />
-      <p>
-        ground floor - 30 beds, meeting room and kitchen - wheelchair
-        accessible.
-      </p>
-      <div className={AccommodationStyle.floor_card}></div>
-    </div>
-    <div>
-      <DetailHeader detailHeaderText="INFORMATION NOTICE" />
-      <p>
-        According to the Sales Registration Act, the seller is obliged to issue
-        a receipt to the buyer. At the same time, he is obliged to register the
-        received sales with the tax administrator online, within 48 hours in the
-        event of a technical failure
-      </p>
-      <p>
-        *Prices do not include city tax 20CZK per person per day). This tax does
-        not apply to guests under 18 or over 65 years of age. Valid from 1.1.
-        2022.
-      </p>
-    </div>
-  </div>
-);
+  );
+};
 
 const DetailHeader = ({ detailHeaderText }) => (
   <h1 className={AccommodationStyle.detail_header}>{detailHeaderText}</h1>
@@ -202,7 +228,7 @@ const ServiceDetail = ({ item }) => (
 
 const ServiceDetail2 = ({ item }) => {
   return (
-    <div className={AccommodationStyle.list2}>
+    <div className={AccommodationStyle.list2} key={item.name}>
       <ServiceDetail item={{ icon: item.icon, name: item.name }} />
       <span className={AccommodationStyle.list2_p}>{item.value}</span>
     </div>
@@ -232,3 +258,39 @@ const Detail3 = ({ rule }) => (
     <span>{rule.specification}</span>
   </span>
 );
+
+const Room = () => {
+  return (
+    <div className={AccommodationStyle.detail_cards}>
+      <span>1 Bed Room</span>
+      <div>
+        <span>1</span>
+        <Image src={guest} height="auto" width="auto" alt="picture of gust" />
+      </div>
+    </div>
+  );
+};
+
+const Line = () => {
+  return <div className={AccommodationStyle.line}></div>;
+};
+
+const ValuePerStandard = ({ item }) => {
+  return (
+    <div className={AccommodationStyle.detail_cards}>
+      <span>{item.value}</span>
+      <span>{item.standard}</span>
+    </div>
+  );
+};
+
+const BookAvailable = () => {
+  return (
+    <div className={AccommodationStyle.detail_cards}>
+      <select>
+        <option>Short-term Stay (1-6 Days)</option>
+      </select>
+      <button>Book Now</button>
+    </div>
+  );
+};

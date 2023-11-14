@@ -75,6 +75,7 @@ export default function page() {
             ))}
           </MealDetailLayout>
         </div>
+
         <div>
           <Image src={service1} alt="picture of service/bedrooms" />
           <ServiceDetail
