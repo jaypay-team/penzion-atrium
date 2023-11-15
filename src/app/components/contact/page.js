@@ -30,10 +30,6 @@ const MapFrame = () => (
       height="100%"
       id="gmap_canvas"
       src="https://www.google.com/maps/embed/v1/place?q=Žižkova+504,+541+01+Trutnov+1-Horní+Předměstí,+Czechia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-      frameborder="0"
-      scrolling="no"
-      marginheight="0"
-      marginwidth="0"
     ></iframe>
   </div>
 );
@@ -85,7 +81,7 @@ const ContactInfo = () => {
 const InfoCard = ({ headingTitle, content, icons }) => (
   <div className={contactUs.info_card}>
     <h4>{headingTitle}</h4>
-    <div>
+    <div className={contactUs.flex}>
       <Image
         src={icons[0]}
         width="auto"
@@ -95,7 +91,7 @@ const InfoCard = ({ headingTitle, content, icons }) => (
       />
       <span>{content[0]}</span>
     </div>
-    <div>
+    <div className={contactUs.flex}>
       <Image src={icons[1]} width="auto" height="auto" alt="picture of info " />
       <span>{content[1]}</span>
     </div>

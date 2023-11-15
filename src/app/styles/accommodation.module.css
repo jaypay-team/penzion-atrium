@@ -2,7 +2,6 @@
   display: grid;
   gap: 2rem;
 }
-
 .main_heading {
   font-family: Urbanist;
   font-size: 52px;
@@ -28,7 +27,6 @@
 }
 .card_body {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
   gap: 0.75rem;
   align-items: center;
 }
@@ -94,7 +92,7 @@
 
 .card:nth-child(2) p {
   font-family: Urbanist;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.625rem;
   letter-spacing: 0px;
@@ -180,7 +178,6 @@
   justify-content: center;
   align-items: center;
   height: 3rem;
-  width: 15rem;
   background: var(--button-background);
   color: var(--white);
   padding: 1rem;
@@ -189,7 +186,6 @@
   outline: none;
 }
 .detail_cards select {
-  width: 15rem;
   height: 3rem;
   outline: none;
   border: 1px solid hsla(0, 0%, 0%, 0.52);

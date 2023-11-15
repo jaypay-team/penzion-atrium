@@ -57,7 +57,7 @@
   color: hsla(0, 0%, 25%, 1);
 }
 .cards input {
-  width: 282px;
+  width: 95%;
   height: 52px;
   padding: 16px;
   border-radius: 10px;
@@ -92,11 +92,23 @@
   letter-spacing: 0em;
   text-align: left;
 }
-
+.specter {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+.specter img {
+  width: auto;
+  height: 26rem;
+  display: block;
+}
 .lists {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
+}
+.lists img {
+  width: 18.5rem;
 }
 .services {
   display: flex;
@@ -116,18 +128,48 @@
 .service_cards {
   display: grid;
   margin: auto;
-  width: 806px;
+  width: 50rem;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 2.5rem;
 }
 .service_cards div {
   display: flex;
   flex-direction: column;
-  width: 180px;
   height: 112px;
   padding: 0 24px;
 }
 .service_cards div * {
   display: flex;
   align-items: auto;
+}
+@media only screen and (max-width: 768px) {
+  .lists img {
+    width: 100%;
+    height: auto;
+  }
+
+  .specter {
+    display: flex;
+  }
+  .specter img {
+    flex-grow: 1;
+    gap: 0;
+  }
+  .cards,
+  .lists {
+    height: fit-content;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+  }
+  .service_cards {
+    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .service_cards div {
+    height: auto;
+    width: 10rem;
+  }
 }

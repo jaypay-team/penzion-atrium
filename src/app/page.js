@@ -55,32 +55,18 @@ export default function Home() {
             </button>
           </form>
         </div>
-        <div>
-          <Image
-            src={left}
-            width="auto"
-            height="400"
-            alt="picture left frame"
-          />
-          <Image
-            src={specter}
-            width="auto"
-            height="400"
-            alt="picture fixed specter frame"
-          />
-          <Image
-            src={right}
-            width="auto"
-            height="400"
-            alt="picture left frame"
-          />
+
+        <div className={homeStyle.specter}>
+          <Image src={left} alt="picture left frame" />
+          <Image src={specter} alt="picture fixed specter frame" />
+          <Image src={right} alt="picture left frame" />
         </div>
       </div>
       <div className={homeStyle.lists}>
-        <Image src={list1} height="auto" width="300" alt="" />
-        <Image src={list2} height="auto" width="300" alt="" />
-        <Image src={list3} height="auto" width="300" alt="" />
-        <Image src={list4} height="auto" width="300" alt="" />
+        <Image src={list1} alt="picture of home" />
+        <Image src={list2} alt="picture of home" />
+        <Image src={list3} alt="picture of home" />
+        <Image src={list4} alt="picture of home" />
       </div>
 
       <div className={homeStyle.services}>

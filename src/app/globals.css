@@ -13,13 +13,17 @@
   margin: 0;
 }
 
-html,
-body {
+html {
   width: 100vw;
-  height: 100vh;
-  display: grid;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  width: 100%;
+  height: fit-content;
+  overflow-x: hidden;
+}
 a {
   color: inherit;
   text-decoration: none;

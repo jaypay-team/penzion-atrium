@@ -11,7 +11,7 @@
 .initial {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.75rem;
 }
 
 .logos {
@@ -25,7 +25,7 @@
 
 .heading {
   font-family: Urbanist;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 0em;
@@ -39,5 +39,12 @@
 }
 .contact_info {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
