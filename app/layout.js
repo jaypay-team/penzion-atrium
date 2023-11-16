@@ -1,6 +1,6 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
-import Wrapper from "../components/wrapper";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import Wrapper from "@/components/wrapper";
 import "./globals.css";
 
 /**
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <link rel="icon" href="/logo.svg" sizes="any" />
-        <title>Trutnov&#39;s</title>
+        <title>Penzion Atrium</title>
       </head>
       <body>
         <Header />
