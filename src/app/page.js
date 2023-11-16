@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import left from "@/assets/left.svg";
-import right from "@/assets/right.svg";
 import specter from "@/assets/specter.svg";
 import homeStyle from "./styles/home.module.css";
 import icon from "@/assets/icon.svg";
@@ -57,11 +55,10 @@ export default function Home() {
         </div>
 
         <div className={homeStyle.specter}>
-          <Image src={left} alt="picture left frame" />
           <Image src={specter} alt="picture fixed specter frame" />
-          <Image src={right} alt="picture left frame" />
         </div>
       </div>
+
       <div className={homeStyle.lists}>
         <Image src={list1} alt="picture of home" />
         <Image src={list2} alt="picture of home" />

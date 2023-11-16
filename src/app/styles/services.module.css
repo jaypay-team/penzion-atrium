@@ -91,3 +91,9 @@
     height: auto;
   }
 }
+@media screen and (max-width: 600px) {
+  .sport_list {
+    display: flex;
+    flex-direction: column;
+  }
+}

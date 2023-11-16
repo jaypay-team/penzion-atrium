@@ -2,12 +2,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
-  height: 450px;
 }
 .cards > div:has(form) {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
+  height: 100%;
 }
 .cards span {
   background: linear-gradient(
@@ -92,15 +93,10 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.specter {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-}
+
 .specter img {
-  width: auto;
-  height: 26rem;
-  display: block;
+  width: 100%;
+  height: auto;
 }
 .lists {
   display: grid;
@@ -148,13 +144,6 @@
     height: auto;
   }
 
-  .specter {
-    display: flex;
-  }
-  .specter img {
-    flex-grow: 1;
-    gap: 0;
-  }
   .cards,
   .lists {
     height: fit-content;
@@ -165,6 +154,7 @@
   .service_cards {
     justify-content: left;
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
