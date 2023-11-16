@@ -17,7 +17,8 @@ export default function page() {
       <h2 className={contactUs.heading}>Contact Us</h2>
       <div className={contactUs.body}>
         <MapFrame />
-        <ContactFrom />
+        <Form />
+        <ContactInfo />
       </div>
     </div>
   );
@@ -34,15 +35,7 @@ const MapFrame = () => (
   </div>
 );
 
-const ContactFrom = () => {
-  return (
-    <div className={contactUs.contact_form}>
-      <From />
-      <ContactInfo />
-    </div>
-  );
-};
-const From = () => {
+const Form = () => {
   return (
     <form className={contactUs.form}>
       <h3>Leave Us A Message</h3>

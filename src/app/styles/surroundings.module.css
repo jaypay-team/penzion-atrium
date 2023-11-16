@@ -16,15 +16,6 @@
   gap: 3rem;
 }
 
-.card:nth-child(even) {
-  grid-template-areas: "element2 element1";
-}
-.card:nth-child(even) > *:nth-child(1) {
-  grid-area: element1;
-}
-.card:nth-child(even) > *:nth-child(2) {
-  grid-area: element2;
-}
 .card div {
   align-self: center;
   display: grid;
@@ -49,15 +40,24 @@
   text-align: left;
   color: hsla(0, 0%, 0%, 1);
 }
-
+.card img {
+  width: 100%;
+  height: auto;
+}
 @media only screen and (max-width: 768px) {
+  /* make cards arranged in a col */
   .card {
-    display: grid;
-    grid-template-areas: "element1 element2"; /* Adjust layout for smaller screens */
     grid-template-columns: 1fr;
-    border: solid;
   }
+}
+@media only screen and (min-width: 769px) {
   .card:nth-child(even) {
-    grid-template-areas: "element1 element2"; /* Revert even cards to default layout */
+    grid-template-areas: "element2 element1";
+  }
+  .card:nth-child(even) > *:nth-child(1) {
+    grid-area: element1;
+  }
+  .card:nth-child(even) > *:nth-child(2) {
+    grid-area: element2;
   }
 }

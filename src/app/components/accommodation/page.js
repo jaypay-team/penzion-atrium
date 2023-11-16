@@ -175,6 +175,7 @@ const Detail = () => {
           <BookAvailable />
         </div>
       </div>
+
       <div>
         <DetailHeader detailHeaderText="First Floor" />
 

@@ -33,12 +33,7 @@ const ContentCards = () => {
 const ContentCard = ({ item, index }) => {
   return (
     <div className={contentStyle.card}>
-      <Image
-        src={pics[index]}
-        height="auto"
-        width="100%"
-        alt="picture of park"
-      />
+      <Image src={pics[index]} alt="picture of park" />
       <div>
         <h1>{item.content.title}</h1>
         <p>{item.content.detail}</p>
