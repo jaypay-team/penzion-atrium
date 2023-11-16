@@ -32,10 +32,10 @@ export default function Header() {
       </div>
 
       <div>
-        <Link href="/components/accommodation">Accommodation</Link>
-        <Link href="/components/services">Services</Link>
-        <Link href="/components/surroundings">Surroundings</Link>
-        <Link href="/components/contact">Contact</Link>
+        <Link href="/accommodation">Accommodation</Link>
+        <Link href="/services">Services</Link>
+        <Link href="/surroundings">Surroundings</Link>
+        <Link href="/contact">Contact</Link>
       </div>
 
       <div>

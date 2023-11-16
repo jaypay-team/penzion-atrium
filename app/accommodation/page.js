@@ -10,7 +10,7 @@ import icon7 from "@/assets/icon7.svg";
 import icon8 from "@/assets/icon8.svg";
 import floor from "@/assets/floor.svg";
 import guest from "@/assets/guest.svg";
-import AccommodationStyle from "@/styles/accommodation.module.css";
+import AccommodationStyle from "../styles/accommodation.module.css";
 
 export default function page() {
   return (
